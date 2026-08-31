@@ -902,24 +902,30 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
       <p>Благодарим за интерес к ордену Odd Fellows. Мы рассмотрим вашу анкету и свяжемся с вами в течение 5 рабочих дней.</p>
     </div>
 
-    <form id="appForm" onsubmit="submitForm(event)">
+    <p id="formError" class="form-note" style="display:none;color:#b3392c;margin-bottom:1.2rem">Не удалось отправить анкету. Пожалуйста, попробуйте ещё раз или напишите нам на <a href="mailto:info@oddfellows.ru" style="color:inherit;text-decoration:underline">info@oddfellows.ru</a>.</p>
+
+    <form id="appForm" onsubmit="submitForm(event)" action="https://formsubmit.co/info@oddfellows.ru" method="POST">
+      <input type="hidden" name="_subject" value="Новая анкета кандидата — Odd Fellows">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-grid">
         <div class="form-section-head">Личные данные</div>
-        <div class="form-group"><label for="lastName">Фамилия *</label><input type="text" id="lastName" required placeholder="Иванов"></div>
-        <div class="form-group"><label for="firstName">Имя *</label><input type="text" id="firstName" required placeholder="Иван"></div>
-        <div class="form-group"><label for="patronymic">Отчество</label><input type="text" id="patronymic" placeholder="Иванович"></div>
-        <div class="form-group"><label for="dob">Дата рождения *</label><input type="date" id="dob" required></div>
-        <div class="form-group"><label for="city">Город *</label><input type="text" id="city" required placeholder="Москва"></div>
-        <div class="form-group"><label for="citizenship">Гражданство</label><input type="text" id="citizenship" placeholder="Россия"></div>
+        <div class="form-group"><label for="lastName">Фамилия *</label><input type="text" id="lastName" name="Фамилия" required placeholder="Иванов"></div>
+        <div class="form-group"><label for="firstName">Имя *</label><input type="text" id="firstName" name="Имя" required placeholder="Иван"></div>
+        <div class="form-group"><label for="patronymic">Отчество</label><input type="text" id="patronymic" name="Отчество" placeholder="Иванович"></div>
+        <div class="form-group"><label for="dob">Дата рождения *</label><input type="date" id="dob" name="Дата рождения" required></div>
+        <div class="form-group"><label for="city">Город *</label><input type="text" id="city" name="Город" required placeholder="Москва"></div>
+        <div class="form-group"><label for="citizenship">Гражданство</label><input type="text" id="citizenship" name="Гражданство" placeholder="Россия"></div>
 
         <div class="form-section-head">Контактная информация</div>
-        <div class="form-group"><label for="email">Электронная почта *</label><input type="email" id="email" required placeholder="ivan@example.com"></div>
-        <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" required placeholder="+7 (___) ___-__-__"></div>
+        <div class="form-group"><label for="email">Электронная почта *</label><input type="email" id="email" name="Электронная почта" required placeholder="ivan@example.com"></div>
+        <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" name="Телефон" required placeholder="+7 (___) ___-__-__"></div>
 
         <div class="form-section-head">Профессия и образование</div>
-        <div class="form-group"><label for="profession">Профессия / должность</label><input type="text" id="profession" placeholder="Инженер, врач, предприниматель..."></div>
+        <div class="form-group"><label for="profession">Профессия / должность</label><input type="text" id="profession" name="Профессия" placeholder="Инженер, врач, предприниматель..."></div>
         <div class="form-group"><label for="education">Образование</label>
-          <select id="education">
+          <select id="education" name="Образование">
             <option value="">Выберите...</option>
             <option>Среднее</option>
             <option>Среднее специальное</option>
@@ -930,13 +936,13 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
         </div>
 
         <div class="form-section-head">О вас</div>
-        <div class="form-group full"><label for="motivation">Почему вы хотите вступить в орден Odd Fellows? *</label><textarea id="motivation" required placeholder="Расскажите, что привлекает вас в ордене и какие ценности вы разделяете..."></textarea></div>
-        <div class="form-group full"><label for="experience">Участие в общественной деятельности или волонтёрстве</label><textarea id="experience" placeholder="Опишите ваш опыт служения обществу, если он есть..."></textarea></div>
-        <div class="form-group full"><label for="referral">Кто вас рекомендовал или как вы узнали об ордене?</label><input type="text" id="referral" placeholder="Имя члена ордена, источник информации..."></div>
+        <div class="form-group full"><label for="motivation">Почему вы хотите вступить в орден Odd Fellows? *</label><textarea id="motivation" name="Мотивация" required placeholder="Расскажите, что привлекает вас в ордене и какие ценности вы разделяете..."></textarea></div>
+        <div class="form-group full"><label for="experience">Участие в общественной деятельности или волонтёрстве</label><textarea id="experience" name="Опыт волонтёрства" placeholder="Опишите ваш опыт служения обществу, если он есть..."></textarea></div>
+        <div class="form-group full"><label for="referral">Кто вас рекомендовал или как вы узнали об ордене?</label><input type="text" id="referral" name="Рекомендация" placeholder="Имя члена ордена, источник информации..."></div>
 
         <div class="form-section-head">Согласие</div>
         <div class="form-group full" style="flex-direction:row;align-items:flex-start;gap:.8rem">
-          <input type="checkbox" id="consent" required style="width:18px;height:18px;margin-top:3px;flex-shrink:0;accent-color:#1a2744">
+          <input type="checkbox" id="consent" name="Согласие на обработку ПД" required style="width:18px;height:18px;margin-top:3px;flex-shrink:0;accent-color:#1a2744">
           <label for="consent" style="font-size:.88rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);cursor:pointer">Я даю согласие на обработку персональных данных в соответствии с законодательством РФ.</label>
         </div>
         <div class="form-submit"><button type="submit" class="btn-submit">Отправить анкету</button></div>
@@ -1122,7 +1128,34 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>50?'0 4px 24px rgba(0,0,0,.35)':'none'});
-function submitForm(e){e.preventDefault();document.getElementById('appForm').style.display='none';const s=document.getElementById('formSuccess');s.style.display='block';s.scrollIntoView({behavior:'smooth',block:'center'})}
+function submitForm(e){
+  e.preventDefault();
+  const form=document.getElementById('appForm');
+  const errorBox=document.getElementById('formError');
+  const btn=form.querySelector('.btn-submit');
+  errorBox.style.display='none';
+  btn.disabled=true;
+  const prevLabel=btn.textContent;
+  btn.textContent='Отправка...';
+  fetch('https://formsubmit.co/ajax/info@oddfellows.ru',{
+    method:'POST',
+    headers:{'Accept':'application/json'},
+    body:new FormData(form)
+  }).then(res=>{
+    if(!res.ok)throw new Error('Request failed');
+    return res.json();
+  }).then(()=>{
+    form.style.display='none';
+    const s=document.getElementById('formSuccess');
+    s.style.display='block';
+    s.scrollIntoView({behavior:'smooth',block:'center'});
+  }).catch(()=>{
+    errorBox.style.display='block';
+    errorBox.scrollIntoView({behavior:'smooth',block:'center'});
+    btn.disabled=false;
+    btn.textContent=prevLabel;
+  });
+}
 const ph=document.getElementById('phone');
 if(ph){ph.addEventListener('input',function(){let v=this.value.replace(/\D/g,'');if(v.startsWith('7')||v.startsWith('8'))v=v.slice(1);let r='+7';if(v.length>0)r+=' ('+v.slice(0,3);if(v.length>=4)r+=') '+v.slice(3,6);if(v.length>=7)r+='-'+v.slice(6,8);if(v.length>=9)r+='-'+v.slice(8,10);this.value=r})}
 </script>
