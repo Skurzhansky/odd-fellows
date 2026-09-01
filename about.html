@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Об ордене — Независимый Орден Odd Fellows</title>
+<meta name="description" content="Кто мы: братство Odd Fellows, объединяющее людей вокруг дружбы, служения и взаимопомощи.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <circle cx="14" cy="14" r="13" stroke="#c9a84c" stroke-width="1.2"/>
+      <ellipse cx="14" cy="10" rx="5.5" ry="3.2" stroke="#c9a84c" stroke-width="1.1" fill="none"/>
+      <circle cx="14" cy="10" r="1.6" fill="#c9a84c"/>
+      <ellipse cx="8"  cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+      <ellipse cx="14" cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+      <ellipse cx="20" cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+    </svg>
+    IOOF · Россия
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html" class="active">Об ордене</a></li>
+    <li><a href="history.html">История</a></li>
+    <li><a href="membership.html">Членство</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="literature.html">Литература</a></li>
+    <li><a href="contact.html">Контакты</a></li>
+    <li><a href="contact.html" class="nav-cta">Связаться с нами</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<section id="about">
+
+  <!-- Background geometric watermark -->
+  <svg class="about-bg-pattern" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.06" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <!-- Large hexagon grid pattern -->
+    <g stroke="#1a2744" fill="none" stroke-width=".7">
+      <polygon points="100,40 130,23 160,40 160,74 130,91 100,74"/>
+      <polygon points="160,74 190,57 220,74 220,108 190,125 160,108"/>
+      <polygon points="220,40 250,23 280,40 280,74 250,91 220,74"/>
+      <polygon points="280,74 310,57 340,74 340,108 310,125 280,108"/>
+      <polygon points="1000,500 1030,483 1060,500 1060,534 1030,551 1000,534"/>
+      <polygon points="1060,534 1090,517 1120,534 1120,568 1090,585 1060,568"/>
+    </g>
+    <!-- Large compass rose center right -->
+    <g transform="translate(1050,350)" stroke="#1a2744" fill="none" stroke-width=".6" opacity=".8">
+      <circle r="80"/>
+      <circle r="55" stroke-dasharray="4,8"/>
+      <line x1="0" y1="-80" x2="0" y2="80"/>
+      <line x1="-80" y1="0" x2="80" y2="0"/>
+      <line x1="-56" y1="-56" x2="56" y2="56"/>
+      <line x1="56" y1="-56" x2="-56" y2="56"/>
+      <polygon points="0,-88 4,-74 0,-68 -4,-74" fill="#c9a84c" opacity=".5"/>
+    </g>
+  </svg>
+
+  <div class="max-w">
+    <div class="about-grid">
+      <div class="about-text" style="position:relative;z-index:2">
+        <p class="section-eyebrow">Кто мы</p>
+        <h2 class="section-title">Братство,<br>объединённое добром</h2>
+        <div class="gold-rule"></div>
+        <p>Независимый Орден Odd Fellows (IOOF) — одна из крупнейших и старейших братских организаций мира. Мы объединяем людей вне зависимости от политических убеждений, религии и социального положения вокруг общих ценностей взаимопомощи и служения обществу.</p>
+        <p>Орден приветствует всех, кто разделяет наши принципы: помогать ближнему в трудную минуту, строить сплочённые сообщества и развиваться как личность в кругу единомышленников.</p>
+        <p>В России ложи Odd Fellows объединяют профессионалов, предпринимателей, людей творческих профессий — всех, кто верит в силу братского союза.</p>
+        <div class="about-values">
+          <!-- Value cards with SVG icons -->
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity=".35"/>
+              <path d="M18 10 C12 10 8 14 8 18 C8 23 13 27 18 30 C23 27 28 23 28 18 C28 14 24 10 18 10Z" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+              <line x1="18" y1="14" x2="18" y2="26" stroke="#c9a84c" stroke-width="1"/>
+              <line x1="12" y1="20" x2="24" y2="20" stroke="#c9a84c" stroke-width="1"/>
+            </svg>
+            <h4>Взаимопомощь</h4>
+            <p>Поддержка братьев и сестёр в сложных жизненных ситуациях</p>
+          </div>
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity=".35"/>
+              <path d="M10 16 C10 12 14 10 18 13 C22 10 26 12 26 16 C26 21 18 27 18 27 C18 27 10 21 10 16Z" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+            </svg>
+            <h4>Служение</h4>
+            <p>Благотворительные проекты и помощь местным сообществам</p>
+          </div>
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity=".35"/>
+              <polygon points="18,9 20.5,15.5 27.5,15.5 22,19.5 24,26 18,22 12,26 14,19.5 8.5,15.5 15.5,15.5" fill="none" stroke="#c9a84c" stroke-width="1.3"/>
+            </svg>
+            <h4>Развитие</h4>
+            <p>Духовный и интеллектуальный рост каждого члена ордена</p>
+          </div>
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="16" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity=".35"/>
+              <!-- Three linked chain loops -->
+              <ellipse cx="10.5" cy="20" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+              <ellipse cx="18" cy="20" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+              <ellipse cx="25.5" cy="20" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+            </svg>
+            <h4>Братство</h4>
+            <p>Прочные связи и международная сеть единомышленников</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual" style="position:relative;z-index:2">
+        <!-- Decorative IOOF symbol card -->
+        <div style="background:var(--navy);padding:2.5rem;text-align:center;position:relative;overflow:hidden">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.06" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <circle cx="200" cy="150" r="140" fill="none" stroke="#c9a84c" stroke-width="1"/>
+            <circle cx="200" cy="150" r="100" fill="none" stroke="#c9a84c" stroke-width=".6" stroke-dasharray="4,8"/>
+            <line x1="60" y1="150" x2="340" y2="150" stroke="#c9a84c" stroke-width=".5"/>
+            <line x1="200" y1="10" x2="200" y2="290" stroke="#c9a84c" stroke-width=".5"/>
+          </svg>
+          <svg width="110" height="110" viewBox="0 0 110 110" style="position:relative;z-index:1">
+            <!-- Outer decorative ring -->
+            <circle cx="55" cy="55" r="50" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+            <circle cx="55" cy="55" r="44" fill="none" stroke="#c9a84c" stroke-width=".6" opacity=".2" stroke-dasharray="3,6"/>
+            <!-- Triangle -->
+            <polygon points="55,14 92,74 18,74" stroke="#c9a84c" stroke-width="1.4" fill="rgba(201,168,76,.05)" opacity=".7"/>
+            <!-- All-seeing eye -->
+            <ellipse cx="55" cy="38" rx="13" ry="7.5" stroke="#c9a84c" stroke-width="1.3" fill="none" opacity=".9"/>
+            <circle cx="55" cy="38" r="4" fill="#c9a84c" opacity=".8"/>
+            <circle cx="55" cy="38" r="1.5" fill="none" stroke="rgba(13,24,41,.5)" stroke-width="1"/>
+            <!-- Three links -->
+            <ellipse cx="37" cy="84" rx="7.5" ry="5.2" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity=".85"/>
+            <ellipse cx="55" cy="84" rx="7.5" ry="5.2" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity=".85"/>
+            <ellipse cx="73" cy="84" rx="7.5" ry="5.2" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity=".85"/>
+          </svg>
+          <p style="color:rgba(255,255,255,.55);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-top:1rem;position:relative;z-index:1">Символика Ордена</p>
+          <p style="color:rgba(255,255,255,.4);font-size:.82rem;margin-top:.5rem;position:relative;z-index:1;font-style:italic">Всевидящее Око · Треугольник · Три Звена</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stat-row">
+          <div class="stat-num">1819</div>
+          <div>
+            <div class="stat-desc">Год основания ордена в Балтиморе, США</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.35);margin-top:.2rem">Более двух веков непрерывного братства</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">100+</div>
+          <div>
+            <div class="stat-desc">Стран мира, где действуют ложи IOOF</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.35);margin-top:.2rem">Единое братство на всех континентах</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <!-- Decorative background SVG -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.07;pointer-events:none" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMid slice">
+    <!-- Full-width star pattern -->
+    <g stroke="#c9a84c" fill="none" stroke-width=".5">
+      <polygon points="100,100 110,70 120,100 90,82 130,82"/>
+      <polygon points="400,100 410,70 420,100 390,82 430,82"/>
+      <polygon points="700,100 710,70 720,100 690,82 730,82"/>
+      <polygon points="1000,100 1010,70 1020,100 990,82 1030,82"/>
+      <polygon points="1300,100 1310,70 1320,100 1290,82 1330,82"/>
+    </g>
+    <line x1="0" y1="1" x2="1400" y2="1" stroke="#c9a84c" stroke-width=".7"/>
+  </svg>
+  <!-- Ornamental top border -->
+  <svg style="position:absolute;top:0;left:0;right:0;width:100%;height:24px;opacity:.35" viewBox="0 0 1400 24" preserveAspectRatio="xMidYMid meet">
+    <line x1="0" y1="12" x2="560" y2="12" stroke="#c9a84c" stroke-width=".8"/>
+    <g transform="translate(700,12)">
+      <polygon points="0,-8 2.5,-2.5 8,-2.5 4,1.5 5.5,7.5 0,4 -5.5,7.5 -4,1.5 -8,-2.5 -2.5,-2.5" fill="#c9a84c"/>
+    </g>
+    <line x1="840" y1="12" x2="1400" y2="12" stroke="#c9a84c" stroke-width=".8"/>
+  </svg>
+
+  <div style="position:relative;z-index:2;margin-bottom:2rem">
+    <svg width="50" height="50" viewBox="0 0 50 50" style="display:block;margin:0 auto 1rem">
+      <circle cx="25" cy="25" r="22" fill="none" stroke="#c9a84c" stroke-width=".9" opacity=".4"/>
+      <ellipse cx="25" cy="17" rx="7.5" ry="4.5" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".85"/>
+      <circle cx="25" cy="17" r="2.2" fill="#c9a84c" opacity=".8"/>
+      <polygon points="25,7 38,26 12,26" stroke="#c9a84c" stroke-width="1.1" fill="rgba(201,168,76,.06)" opacity=".75"/>
+      <ellipse cx="16" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+      <ellipse cx="25" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+      <ellipse cx="34" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+    </svg>
+  </div>
+
+  <div class="footer-logo">Независимый Орден Odd Fellows</div>
+  <p class="footer-motto">"Дружба · Любовь · Истина"</p>
+  <div class="footer-links">
+    <a href="about.html">Об ордене</a>
+    <a href="history.html">История</a>
+    <a href="membership.html">Членство</a>
+    <a href="faq.html">FAQ</a>
+    <a href="literature.html">Литература</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <p class="footer-copy">© 2025 Ложа IOOF · Россия · Все права защищены</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
