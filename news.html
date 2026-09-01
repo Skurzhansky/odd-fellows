@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Литература — Независимый Орден Odd Fellows</title>
-<meta name="description" content="Книги об ордене Odd Fellows, доступные для скачивания в формате PDF.">
+<title>Новости — Независимый Орден Odd Fellows</title>
+<meta name="description" content="Новости ордена Odd Fellows со всего мира: события, юбилеи и благотворительные проекты лож.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=3">
 </head>
@@ -26,17 +26,17 @@
     <li><a href="history.html">История</a></li>
     <li><a href="membership.html">Членство</a></li>
     <li><a href="faq.html">FAQ</a></li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="literature.html" class="active">Литература</a></li>
+    <li><a href="news.html" class="active">Новости</a></li>
+    <li><a href="literature.html">Литература</a></li>
     <li><a href="contact.html">Контакты</a></li>
     <li><a href="contact.html" class="nav-cta">Связаться с нами</a></li>
   </ul>
   <div class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
-<section id="literature">
+<section id="news">
 
   <!-- Background watermark -->
-  <svg style="position:absolute;right:3%;bottom:5%;opacity:.05;pointer-events:none" width="300" height="300" viewBox="0 0 300 300">
+  <svg style="position:absolute;right:3%;top:5%;opacity:.05;pointer-events:none" width="300" height="300" viewBox="0 0 300 300">
     <circle cx="150" cy="150" r="140" fill="none" stroke="#1a2744" stroke-width="1.2"/>
     <polygon points="150,40 236,95 236,205 150,260 64,205 64,95" fill="none" stroke="#1a2744" stroke-width=".8"/>
     <line x1="150" y1="10" x2="150" y2="290" stroke="#1a2744" stroke-width=".5"/>
@@ -44,24 +44,13 @@
   </svg>
 
   <div class="max-w" style="position:relative;z-index:2">
-    <p class="section-eyebrow">Литература</p>
-    <h2 class="section-title">Литература ордена</h2>
+    <p class="section-eyebrow">Мир Odd Fellows</p>
+    <h2 class="section-title">Новости ордена</h2>
     <div class="gold-rule"></div>
-    <p class="doc-intro">Книги и материалы об ордене Odd Fellows, доступные для чтения и скачивания.</p>
+    <p class="news-intro">Новости о ложах Odd Fellows со всего мира — события, юбилеи, благотворительные проекты. Материалы собираются из открытых источников на разных языках и переводятся на русский; обновление — раз в неделю.</p>
 
-    <div class="doc-grid">
-      <div class="doc-card">
-        <svg class="doc-icon" viewBox="0 0 60 60">
-          <path d="M14 6h24l10 10v38a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
-          <path d="M38 6v10h10" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
-          <line x1="20" y1="30" x2="42" y2="30" stroke="#c9a84c" stroke-width="1.2" opacity=".6"/>
-          <line x1="20" y1="38" x2="42" y2="38" stroke="#c9a84c" stroke-width="1.2" opacity=".6"/>
-          <line x1="20" y1="46" x2="34" y2="46" stroke="#c9a84c" stroke-width="1.2" opacity=".6"/>
-        </svg>
-        <h3>Книга об ордене Odd Fellows</h3>
-        <p>Подробное издание об истории, символике и традициях Независимого Ордена Odd Fellows.</p>
-        <a class="doc-link" href="docs/Odd_Fellows_Book_RU.pdf" target="_blank" rel="noopener">Скачать PDF</a>
-      </div>
+    <div id="newsList" class="news-list">
+      <p class="news-loading">Загрузка новостей…</p>
     </div>
   </div>
 </section>
@@ -113,5 +102,45 @@
   <p class="footer-copy">© 2025 Ложа IOOF · Россия · Все права защищены</p>
 </footer>
 <script src="script.js?v=2"></script>
+<script>
+(function(){
+  var list = document.getElementById('newsList');
+  var monthsRu = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  function formatDate(iso){
+    var parts = iso.split('-').map(Number);
+    if(parts.length !== 3) return iso;
+    return parts[2] + ' ' + monthsRu[parts[1]-1] + ' ' + parts[0];
+  }
+  function esc(s){
+    var d = document.createElement('div');
+    d.textContent = s == null ? '' : String(s);
+    return d.innerHTML;
+  }
+  fetch('news.json?v=' + Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('news.json ' + r.status); return r.json(); })
+    .then(function(items){
+      if(!Array.isArray(items) || items.length === 0){
+        list.innerHTML = '<p class="news-empty">Новости пока не опубликованы. Первый выпуск скоро появится здесь.</p>';
+        return;
+      }
+      items = items.slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
+      list.innerHTML = items.map(function(n){
+        var country = n.country ? '<span class="news-country">' + esc(n.country) + '</span>' : '';
+        var source = n.source_url
+          ? '<p class="news-source">Источник: <a href="' + esc(n.source_url) + '" target="_blank" rel="noopener">' + esc(n.source_name || n.source_url) + '</a></p>'
+          : (n.source_name ? '<p class="news-source">Источник: ' + esc(n.source_name) + '</p>' : '');
+        return '<article class="news-card">' +
+          '<div class="news-meta"><span>' + esc(formatDate(n.date || '')) + '</span>' + country + '</div>' +
+          '<h3>' + esc(n.title) + '</h3>' +
+          '<p>' + esc(n.summary) + '</p>' +
+          source +
+          '</article>';
+      }).join('');
+    })
+    .catch(function(){
+      list.innerHTML = '<p class="news-empty">Не удалось загрузить новости. Попробуйте обновить страницу позже.</p>';
+    });
+})();
+</script>
 </body>
 </html>
