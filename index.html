@@ -127,6 +127,19 @@ section{padding:90px 5%}
 .steps-list li{counter-increment:step;display:flex;gap:1.2rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.07);color:rgba(255,255,255,.78);font-size:.93rem}
 .steps-list li::before{content:counter(step,decimal-leading-zero);font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);font-weight:700;flex-shrink:0;line-height:1.3}
 
+/* FAQ */
+#faq{background:var(--white);position:relative;overflow:hidden}
+.faq-list{max-width:900px;margin:3rem auto 0;display:flex;flex-direction:column;gap:.9rem}
+.faq-item{background:var(--cream);border:1px solid rgba(201,168,76,.25);border-radius:2px;overflow:hidden}
+.faq-item[open]{border-color:rgba(201,168,76,.55)}
+.faq-question{list-style:none;cursor:pointer;padding:1.3rem 1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);font-weight:600}
+.faq-question::-webkit-details-marker{display:none}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.05rem;line-height:1;transition:transform .25s}
+.faq-item[open] .faq-icon{transform:rotate(45deg)}
+.faq-answer{padding:0 1.6rem 1.5rem;color:var(--muted);font-size:.92rem}
+.faq-answer p{margin-bottom:.8rem}
+.faq-answer p:last-child{margin-bottom:0}
+
 /* DOCUMENTS */
 #documents{background:var(--cream);position:relative;overflow:hidden}
 .doc-intro{color:var(--muted);max-width:640px}
@@ -192,6 +205,7 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
     <li><a href="#about">Об ордене</a></li>
     <li><a href="#history">История</a></li>
     <li><a href="#membership">Членство</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#documents">Документы</a></li>
     <li><a href="#contact">Контакты</a></li>
     <li><a href="#contact" class="nav-cta">Связаться с нами</a></li>
@@ -867,6 +881,219 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
   </svg>
 </div>
 
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+
+  <!-- Background watermark -->
+  <svg style="position:absolute;right:3%;top:5%;opacity:.05;pointer-events:none" width="300" height="300" viewBox="0 0 300 300">
+    <circle cx="150" cy="150" r="140" fill="none" stroke="#1a2744" stroke-width="1.2"/>
+    <polygon points="150,40 236,95 236,205 150,260 64,205 64,95" fill="none" stroke="#1a2744" stroke-width=".8"/>
+    <line x1="150" y1="10" x2="150" y2="290" stroke="#1a2744" stroke-width=".5"/>
+    <line x1="10" y1="150" x2="290" y2="150" stroke="#1a2744" stroke-width=".5"/>
+  </svg>
+
+  <div class="max-w" style="position:relative;z-index:2">
+    <p class="section-eyebrow">Вопросы и ответы</p>
+    <h2 class="section-title">Часто задаваемые вопросы об Odd Fellows</h2>
+    <div class="gold-rule"></div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">Что такое Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Odd Fellows, или Independent Order of Odd Fellows, — это международная братская и благотворительная организация, объединяющая людей на основе дружбы, взаимной поддержки, личной ответственности и служения обществу.</p>
+          <p>Главные принципы Odd Fellows традиционно выражаются словами:</p>
+          <p><strong>Friendship, Love and Truth — Дружба, Любовь и Истина.</strong></p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Какова главная цель Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Цель Odd Fellows — объединять людей, готовых помогать друг другу и обществу.</p>
+          <p>Историческая формула служения Odd Fellows звучит так: посещать больных, помогать нуждающимся, достойно провожать умерших и заботиться о сиротах.</p>
+          <p>В современном мире это выражается в благотворительности, волонтёрстве, поддержке социальных проектов, братской взаимопомощи, дружеском общении и личном нравственном развитии.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Odd Fellows — это масонство?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет. Odd Fellows — не масонство.</strong></p>
+          <p>Odd Fellows не является частью масонства, не подчиняется масонским великим ложам, не получает от них полномочий и не является масонским орденом, степенью, уставом или «парамасонской» структурой.</p>
+          <p>Это самостоятельная историческая братская организация со своей собственной традицией, символикой, структурой, степенями, ритуалами, уставами и благотворительной миссией.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Почему Odd Fellows иногда сравнивают с масонством?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Сравнение возникает потому, что у многих старых братских обществ есть внешне похожие элементы: ложи, собрания, символы, церемонии, должностные лица, степени, братское обращение и благотворительная деятельность.</p>
+          <p>Однако такие элементы не делают организацию масонской. В XVIII–XIX веках подобные формы были обычны для разных братских, взаимопомощных и благотворительных обществ. Odd Fellows и масонство — разные организации с разной историей, разной системой управления и разной внутренней традицией.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Нужно ли быть масоном, чтобы вступить в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет.</strong> Масонство не является условием вступления в Odd Fellows.</p>
+          <p>Членом Odd Fellows может стать человек, который разделяет ценности дружбы, помощи ближнему, честности, ответственности и уважительного отношения к другим людям, при соблюдении правил конкретной юрисдикции и ложи.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Может ли масон быть членом Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Да, если он соответствует требованиям Odd Fellows и принят в установленном порядке.</p>
+          <p>Но это не означает организационной связи между Odd Fellows и масонством. Один и тот же человек может состоять в разных общественных, благотворительных, профессиональных или братских объединениях. Личное членство отдельных людей не превращает одну организацию в часть другой.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Odd Fellows имеет отношение к масонским великим ложам?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет.</strong> Odd Fellows не находится под управлением масонских великих лож, не требует масонского признания и не является частью масонской системы.</p>
+          <p>Odd Fellows имеет собственные органы управления, собственные правила, собственные ложи и собственную международную структуру.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Odd Fellows — это религиозная организация?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет.</strong> Odd Fellows не является церковью, сектой, религиозным движением или заменой религиозной жизни.</p>
+          <p>Организация уважает веру и мировоззрение своих членов, но не занимается богословскими спорами, не навязывает религиозных взглядов и не подменяет собой храм, церковь, мечеть, синагогу или любую иную религиозную общину.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Odd Fellows — это политическая организация?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет.</strong> Odd Fellows не является политической партией, политическим клубом или движением.</p>
+          <p>В ложах Odd Fellows не ведутся партийные споры и не продвигаются политические программы. Основное внимание уделяется дружбе, благотворительности, взаимной поддержке, воспитанию ответственности и служению обществу.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Odd Fellows — это «тайное общество»?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Odd Fellows не является тайным обществом в смысле скрытой политической, религиозной или иной организации с закрытыми общественными целями.</p>
+          <p>Как и многие братские общества, Odd Fellows имеет внутренние церемонии, знаки, традиции и элементы, предназначенные для членов. Но цели организации открыты: дружба, взаимопомощь, благотворительность, нравственное развитие и служение обществу.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Почему в Odd Fellows есть ритуалы и степени?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Ритуалы и степени в Odd Fellows используются как символическая и воспитательная форма.</p>
+          <p>Они помогают передавать нравственные уроки, говорить о дружбе, верности, милосердии, ответственности, честности и служении ближнему.</p>
+          <p>Это не религиозные таинства, не магические действия и не эзотерическое учение. Это традиционный язык братского общества, через который участникам передаются моральные и этические идеи.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Что означает символ трёх звеньев цепи?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Три соединённых звена — один из наиболее известных символов Odd Fellows. Они обозначают три главных принципа:</p>
+          <p><strong>Friendship, Love and Truth — Дружба, Любовь и Истина.</strong></p>
+          <p>Цепь также напоминает о связи между людьми, взаимной поддержке и ответственности друг перед другом.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Что означает слово «ложа» в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>В Odd Fellows слово «ложа» означает местное отделение или собрание членов организации.</p>
+          <p>Это не делает Odd Fellows масонством. Слово «ложа» исторически использовалось разными братскими, ремесленными, благотворительными и общественными организациями.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Чем занимается ложа Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Ложа Odd Fellows проводит регулярные встречи, принимает новых членов, организует благотворительные и социальные проекты, поддерживает членов в трудных обстоятельствах, развивает братское общение и участвует в жизни местного сообщества.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Какие люди вступают в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>В Odd Fellows вступают люди, которым близки идеи дружбы, взаимной поддержки, благотворительности, личной ответственности и уважения к другим.</p>
+          <p>Для Odd Fellows важны не происхождение, социальный статус, профессия или материальное положение, а готовность человека быть полезным, честным, доброжелательным и деятельным членом братского сообщества.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Могут ли женщины вступать в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>В международной традиции Odd Fellows существует женская ветвь Rebekahs. В ряде юрисдикций современные правила также допускают более широкое участие женщин в соответствии с местным законодательством и уставами конкретной юрисдикции.</p>
+          <p>Порядок членства зависит от страны, юрисдикции и действующих правил организации.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Является ли Odd Fellows международной организацией?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Да.</strong> Odd Fellows — международное движение с ложами и юрисдикциями в разных странах.</p>
+          <p>При этом каждая страна и каждая юрисдикция действуют в соответствии с местным законодательством и внутренними правилами организации.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Что даёт членство в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Членство в Odd Fellows даёт возможность быть частью международного братского сообщества, участвовать в благотворительности, находить друзей, развивать навыки общения и ответственности, поддерживать других и получать поддержку самому.</p>
+          <p>Odd Fellows — это не клуб привилегий и не инструмент карьерного продвижения. Это путь личного участия, служения и братской взаимопомощи.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Есть ли в Odd Fellows «секретные знания»?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Нет.</strong> Odd Fellows не предлагает «секретных знаний», эзотерических учений или оккультных практик.</p>
+          <p>Внутренняя традиция Odd Fellows состоит из символических церемоний, нравственных наставлений и братских обычаев. Их задача — не скрыть информацию от общества, а создать особую воспитательную и доверительную среду для членов.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Можно ли считать Odd Fellows общественной организацией взаимопомощи?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p><strong>Да</strong>, в широком смысле Odd Fellows можно описать как братскую организацию взаимопомощи и благотворительности.</p>
+          <p>Исторически такие организации помогали людям до появления развитых систем социальной защиты. Сегодня Odd Fellows сохраняет эту традицию, соединяя дружеское общение, нравственные ценности и практическую помощь.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Как вступить в Odd Fellows?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Обычно путь к членству начинается с знакомства с действующей ложей или представителями организации. Кандидат узнаёт о целях, правилах и традициях Odd Fellows, после чего может подать заявление в установленном порядке.</p>
+          <p>Порядок вступления зависит от конкретной юрисдикции, местных правил и действующего законодательства.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Что важно понять об Odd Fellows в первую очередь?<span class="faq-icon">+</span></summary>
+        <div class="faq-answer">
+          <p>Odd Fellows — это самостоятельная братская и благотворительная организация, основанная на дружбе, взаимопомощи, уважении и служении обществу.</p>
+          <p>Odd Fellows — не масонство, не религия, не политическая структура и не закрытый клуб влияния. Это сообщество людей, которые стремятся делать добрые дела, поддерживать друг друга и строить отношения на принципах Дружбы, Любви и Истины.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORNAMENTAL DIVIDER ═══ -->
+<div class="orn-divider" style="background:var(--cream);padding:22px 5%">
+  <svg width="100%" height="40" viewBox="0 0 900 40" preserveAspectRatio="xMidYMid meet">
+    <line x1="0" y1="20" x2="380" y2="20" stroke="#c9a84c" stroke-width=".7" opacity=".3"/>
+    <g transform="translate(450,20)">
+      <polygon points="0,-10 3,-3 10,-3 5,2 7,9 0,5 -7,9 -5,2 -10,-3 -3,-3" fill="#c9a84c" opacity=".5"/>
+      <line x1="-35" y1="0" x2="-18" y2="0" stroke="#c9a84c" stroke-width=".8" opacity=".4"/>
+      <line x1="18" y1="0" x2="35" y2="0" stroke="#c9a84c" stroke-width=".8" opacity=".4"/>
+    </g>
+    <line x1="520" y1="20" x2="900" y2="20" stroke="#c9a84c" stroke-width=".7" opacity=".3"/>
+  </svg>
+</div>
+
 <!-- ═══ DOCUMENTS ═══ -->
 <section id="documents">
 
@@ -882,7 +1109,7 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
     <p class="section-eyebrow">Материалы</p>
     <h2 class="section-title">Документы ордена</h2>
     <div class="gold-rule"></div>
-    <p class="doc-intro">Материалы об ордене Odd Fellows, доступные для чтения и скачивания.</p>
+    <p class="doc-intro">Книга об ордене Odd Fellows, доступная для скачивания в формате PDF.</p>
 
     <div class="doc-grid">
       <div class="doc-card">
@@ -893,9 +1120,9 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
           <line x1="20" y1="38" x2="42" y2="38" stroke="#c9a84c" stroke-width="1.2" opacity=".6"/>
           <line x1="20" y1="46" x2="34" y2="46" stroke="#c9a84c" stroke-width="1.2" opacity=".6"/>
         </svg>
-        <h3>FAQ — Часто задаваемые вопросы</h3>
-        <p>Ответы на популярные вопросы об ордене Odd Fellows: кто мы, чем занимаемся и как устроено братство.</p>
-        <a class="doc-link" href="docs/Odd_Fellows_FAQ_RU.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+        <h3>Книга об ордене Odd Fellows</h3>
+        <p>Подробное издание об истории, символике и традициях Независимого Ордена Odd Fellows.</p>
+        <a class="doc-link" href="docs/Odd_Fellows_Book_RU.pdf" target="_blank" rel="noopener">Скачать PDF</a>
       </div>
     </div>
   </div>
@@ -1067,6 +1294,7 @@ footer{background:var(--navy3);padding:3rem 5%;text-align:center;position:relati
     <a href="#about">Об ордене</a>
     <a href="#history">История</a>
     <a href="#membership">Членство</a>
+    <a href="#faq">FAQ</a>
     <a href="#documents">Документы</a>
     <a href="#contact">Контакты</a>
   </div>
