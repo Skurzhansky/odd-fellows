@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>История — Независимый Орден Odd Fellows</title>
+<meta name="description" content="Два века традиций Odd Fellows: от истоков в Англии до ложи в России.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <circle cx="14" cy="14" r="13" stroke="#c9a84c" stroke-width="1.2"/>
+      <ellipse cx="14" cy="10" rx="5.5" ry="3.2" stroke="#c9a84c" stroke-width="1.1" fill="none"/>
+      <circle cx="14" cy="10" r="1.6" fill="#c9a84c"/>
+      <ellipse cx="8"  cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+      <ellipse cx="14" cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+      <ellipse cx="20" cy="19" rx="3.4" ry="2.3" stroke="#c9a84c" stroke-width=".9" fill="none"/>
+    </svg>
+    IOOF · Россия
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html">Об ордене</a></li>
+    <li><a href="history.html" class="active">История</a></li>
+    <li><a href="membership.html">Членство</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="literature.html">Литература</a></li>
+    <li><a href="contact.html">Контакты</a></li>
+    <li><a href="contact.html" class="nav-cta">Связаться с нами</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<section id="history">
+
+  <!-- Subtle background ornament -->
+  <svg style="position:absolute;right:-80px;top:50%;transform:translateY(-50%);opacity:.04;pointer-events:none" width="400" height="400" viewBox="0 0 400 400">
+    <circle cx="200" cy="200" r="190" fill="none" stroke="#1a2744" stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="140" fill="none" stroke="#1a2744" stroke-width="1" stroke-dasharray="6,10"/>
+    <circle cx="200" cy="200" r="90" fill="none" stroke="#1a2744" stroke-width=".8"/>
+    <line x1="10" y1="200" x2="390" y2="200" stroke="#1a2744" stroke-width=".7"/>
+    <line x1="200" y1="10" x2="200" y2="390" stroke="#1a2744" stroke-width=".7"/>
+    <line x1="55" y1="55" x2="345" y2="345" stroke="#1a2744" stroke-width=".5"/>
+    <line x1="345" y1="55" x2="55" y2="345" stroke="#1a2744" stroke-width=".5"/>
+  </svg>
+
+  <div class="max-w" style="position:relative;z-index:2">
+    <p class="section-eyebrow">История</p>
+    <h2 class="section-title">Два века традиций</h2>
+    <div class="gold-rule"></div>
+
+    <div class="history-2col">
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">1730-е</div>
+          <h3>Истоки в Англии</h3>
+          <p>Первые упоминания о братстве Odd Fellows появляются в Англии как рабочие взаимопомощные союзы эпохи промышленной революции.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1819</div>
+          <h3>Основание IOOF в США</h3>
+          <p>Томас Уайлдей основывает Независимый Орден Odd Fellows в Балтиморе. Вводится система степеней посвящения и ритуалов.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">1851</div>
+          <h3>Распространение по миру</h3>
+          <p>Орден перешагивает границы Америки. Ложи появляются в Европе, Австралии и Азии — Odd Fellows становятся глобальным братством.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">XX в.</div>
+          <h3>Открытие для женщин</h3>
+          <p>Орден последовательно открывает двери для женщин, утверждая принцип равноправия всех членов без различия пола.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">Сегодня</div>
+          <h3>Орден в России</h3>
+          <p>Российские ложи IOOF действуют как часть мирового братства, объединяя людей вокруг общих ценностей и социального служения.</p>
+        </div>
+      </div>
+
+      <!-- Three links explanation with SVG illustration -->
+      <div>
+        <p style="color:var(--muted);margin-bottom:1.5rem;font-size:1rem;">Название «Odd Fellows» — «Чудные братья» — восходит к временам, когда само понятие взаимопомощи между чужими людьми казалось необычным. Основатели считали своим долгом помогать тем, кому не могла помочь ни семья, ни церковь.</p>
+
+        <!-- Three Links illustrated -->
+        <div style="background:var(--navy);padding:2.2rem;position:relative;overflow:hidden">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.08;pointer-events:none" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid slice">
+            <polygon points="250,10 420,110 420,190 80,190 80,110" fill="none" stroke="#c9a84c" stroke-width="1"/>
+          </svg>
+          <!-- Illustrated chain -->
+          <svg width="100%" height="56" viewBox="0 0 300 56" style="display:block;margin-bottom:1.5rem">
+            <defs>
+              <linearGradient id="chainG" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#c9a84c" stop-opacity=".7"/>
+                <stop offset="50%" stop-color="#e2c26e"/>
+                <stop offset="100%" stop-color="#c9a84c" stop-opacity=".7"/>
+              </linearGradient>
+            </defs>
+            <!-- Link 1 -->
+            <ellipse cx="70" cy="28" rx="36" ry="22" stroke="url(#chainG)" stroke-width="6" fill="none"/>
+            <ellipse cx="70" cy="28" rx="20" ry="10" stroke="#c9a84c" stroke-width="1" fill="none" opacity=".3"/>
+            <!-- Link 2 -->
+            <ellipse cx="150" cy="28" rx="36" ry="22" stroke="url(#chainG)" stroke-width="6" fill="none"/>
+            <ellipse cx="150" cy="28" rx="20" ry="10" stroke="#c9a84c" stroke-width="1" fill="none" opacity=".3"/>
+            <!-- Link 3 -->
+            <ellipse cx="230" cy="28" rx="36" ry="22" stroke="url(#chainG)" stroke-width="6" fill="none"/>
+            <ellipse cx="230" cy="28" rx="20" ry="10" stroke="#c9a84c" stroke-width="1" fill="none" opacity=".3"/>
+            <!-- Labels under links -->
+            <text x="70"  y="52" text-anchor="middle" font-family="Raleway,sans-serif" font-size="8" fill="#c9a84c" letter-spacing="1">ДРУЖБА</text>
+            <text x="150" y="52" text-anchor="middle" font-family="Raleway,sans-serif" font-size="8" fill="#c9a84c" letter-spacing="1">ЛЮБОВЬ</text>
+            <text x="230" y="52" text-anchor="middle" font-family="Raleway,sans-serif" font-size="8" fill="#c9a84c" letter-spacing="1">ИСТИНА</text>
+          </svg>
+          <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:1.2rem;display:flex;flex-direction:column;gap:.8rem">
+            <p style="color:rgba(255,255,255,.75);font-size:.88rem"><strong style="color:var(--gold2)">Дружба</strong> — искренняя привязанность и верность братьям и сёстрам.</p>
+            <p style="color:rgba(255,255,255,.75);font-size:.88rem"><strong style="color:var(--gold2)">Любовь</strong> — сострадательная забота о ближнем, деятельная и бескорыстная.</p>
+            <p style="color:rgba(255,255,255,.75);font-size:.88rem"><strong style="color:var(--gold2)">Истина</strong> — честность во всём: в словах, поступках и отношениях.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Principle cartouches with custom SVG icons -->
+    <div class="cartouche-grid">
+      <!-- Friendship -->
+      <div class="cartouche">
+        <!-- Decorative top cap -->
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,20 L60,20 L80,8 L100,20 L200,20 L220,8 L240,20 L300,20" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+        <div class="cartouche-body">
+          <div class="cartouche-icon">
+            <svg viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="33" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".2"/>
+              <!-- Handshake simplified -->
+              <path d="M16 38 C16 38 22 32 28 32 L36 32 L44 26 C44 26 50 24 52 28 L56 32" stroke="#c9a84c" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M16 42 C20 46 26 48 32 46 L44 40 L52 36" stroke="#c9a84c" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="26" cy="26" r="8" fill="none" stroke="#c9a84c" stroke-width="1.3"/>
+              <circle cx="46" cy="26" r="8" fill="none" stroke="#c9a84c" stroke-width="1.3"/>
+              <!-- hearts above heads -->
+              <path d="M24,19 C23,16 20,16 20,19 C20,21 24,24 24,24 C24,24 28,21 28,19 C28,16 25,16 24,19Z" fill="#c9a84c" opacity=".6" transform="scale(0.7) translate(6,-4)"/>
+            </svg>
+          </div>
+          <h3>Дружба</h3>
+          <p>Верность и поддержка братьев и сестёр ордена в любых обстоятельствах жизни</p>
+        </div>
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,0 L60,0 L80,12 L100,0 L200,0 L220,12 L240,0 L300,0" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+      </div>
+
+      <!-- Love -->
+      <div class="cartouche">
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,20 L60,20 L80,8 L100,20 L200,20 L220,8 L240,20 L300,20" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+        <div class="cartouche-body">
+          <div class="cartouche-icon">
+            <svg viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="33" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".2"/>
+              <!-- Open hands / offering -->
+              <path d="M20 50 C20 50 22 44 26 42 L32 40 L36 36 L40 40 L46 42 C50 44 52 50 52 50" stroke="#c9a84c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M20 50 L52 50" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Heart center -->
+              <path d="M36,28 C35,24 30,24 30,28 C30,32 36,37 36,37 C36,37 42,32 42,28 C42,24 37,24 36,28Z" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+              <!-- Radiating lines from heart -->
+              <line x1="36" y1="20" x2="36" y2="16" stroke="#c9a84c" stroke-width="1" opacity=".5"/>
+              <line x1="44" y1="22" x2="47" y2="19" stroke="#c9a84c" stroke-width="1" opacity=".5"/>
+              <line x1="28" y1="22" x2="25" y2="19" stroke="#c9a84c" stroke-width="1" opacity=".5"/>
+            </svg>
+          </div>
+          <h3>Любовь</h3>
+          <p>Бескорыстная забота о ближнем, служение обществу и помощь нуждающимся</p>
+        </div>
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,0 L60,0 L80,12 L100,0 L200,0 L220,12 L240,0 L300,0" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+      </div>
+
+      <!-- Truth -->
+      <div class="cartouche">
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,20 L60,20 L80,8 L100,20 L200,20 L220,8 L240,20 L300,20" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+        <div class="cartouche-body">
+          <div class="cartouche-icon">
+            <svg viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="33" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".2"/>
+              <!-- Balance scales of truth -->
+              <line x1="36" y1="18" x2="36" y2="52" stroke="#c9a84c" stroke-width="1.5"/>
+              <line x1="20" y1="28" x2="52" y2="28" stroke="#c9a84c" stroke-width="1.5"/>
+              <!-- Left pan -->
+              <path d="M14,38 Q20,46 26,38" stroke="#c9a84c" stroke-width="1.3" fill="none"/>
+              <line x1="14" y1="38" x2="20" y2="28" stroke="#c9a84c" stroke-width="1" opacity=".7"/>
+              <line x1="26" y1="38" x2="20" y2="28" stroke="#c9a84c" stroke-width="1" opacity=".7"/>
+              <!-- Right pan -->
+              <path d="M46,38 Q52,46 58,38" stroke="#c9a84c" stroke-width="1.3" fill="none"/>
+              <line x1="46" y1="38" x2="52" y2="28" stroke="#c9a84c" stroke-width="1" opacity=".7"/>
+              <line x1="58" y1="38" x2="52" y2="28" stroke="#c9a84c" stroke-width="1" opacity=".7"/>
+              <!-- Top ornament -->
+              <circle cx="36" cy="18" r="3.5" fill="none" stroke="#c9a84c" stroke-width="1.2"/>
+              <!-- Base -->
+              <line x1="28" y1="54" x2="44" y2="54" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Истина</h3>
+          <p>Честность, прозрачность и нравственная целостность в каждом поступке</p>
+        </div>
+        <svg width="100%" height="20" viewBox="0 0 300 20"><path d="M0,0 L60,0 L80,12 L100,0 L200,0 L220,12 L240,0 L300,0" fill="none" stroke="#c9a84c" stroke-width=".8" opacity=".4"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <!-- Decorative background SVG -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.07;pointer-events:none" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMid slice">
+    <!-- Full-width star pattern -->
+    <g stroke="#c9a84c" fill="none" stroke-width=".5">
+      <polygon points="100,100 110,70 120,100 90,82 130,82"/>
+      <polygon points="400,100 410,70 420,100 390,82 430,82"/>
+      <polygon points="700,100 710,70 720,100 690,82 730,82"/>
+      <polygon points="1000,100 1010,70 1020,100 990,82 1030,82"/>
+      <polygon points="1300,100 1310,70 1320,100 1290,82 1330,82"/>
+    </g>
+    <line x1="0" y1="1" x2="1400" y2="1" stroke="#c9a84c" stroke-width=".7"/>
+  </svg>
+  <!-- Ornamental top border -->
+  <svg style="position:absolute;top:0;left:0;right:0;width:100%;height:24px;opacity:.35" viewBox="0 0 1400 24" preserveAspectRatio="xMidYMid meet">
+    <line x1="0" y1="12" x2="560" y2="12" stroke="#c9a84c" stroke-width=".8"/>
+    <g transform="translate(700,12)">
+      <polygon points="0,-8 2.5,-2.5 8,-2.5 4,1.5 5.5,7.5 0,4 -5.5,7.5 -4,1.5 -8,-2.5 -2.5,-2.5" fill="#c9a84c"/>
+    </g>
+    <line x1="840" y1="12" x2="1400" y2="12" stroke="#c9a84c" stroke-width=".8"/>
+  </svg>
+
+  <div style="position:relative;z-index:2;margin-bottom:2rem">
+    <svg width="50" height="50" viewBox="0 0 50 50" style="display:block;margin:0 auto 1rem">
+      <circle cx="25" cy="25" r="22" fill="none" stroke="#c9a84c" stroke-width=".9" opacity=".4"/>
+      <ellipse cx="25" cy="17" rx="7.5" ry="4.5" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".85"/>
+      <circle cx="25" cy="17" r="2.2" fill="#c9a84c" opacity=".8"/>
+      <polygon points="25,7 38,26 12,26" stroke="#c9a84c" stroke-width="1.1" fill="rgba(201,168,76,.06)" opacity=".75"/>
+      <ellipse cx="16" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+      <ellipse cx="25" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+      <ellipse cx="34" cy="35" rx="5.5" ry="3.8" stroke="#c9a84c" stroke-width="1.1" fill="none" opacity=".8"/>
+    </svg>
+  </div>
+
+  <div class="footer-logo">Независимый Орден Odd Fellows</div>
+  <p class="footer-motto">"Дружба · Любовь · Истина"</p>
+  <div class="footer-links">
+    <a href="about.html">Об ордене</a>
+    <a href="history.html">История</a>
+    <a href="membership.html">Членство</a>
+    <a href="faq.html">FAQ</a>
+    <a href="literature.html">Литература</a>
+    <a href="contact.html">Контакты</a>
+  </div>
+  <p class="footer-copy">© 2025 Ложа IOOF · Россия · Все права защищены</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
