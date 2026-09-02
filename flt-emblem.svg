@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 190">
+  <!-- Bottom-left ring: red -->
+  <ellipse cx="80" cy="120" rx="56" ry="42" fill="none" stroke="#c0272d" stroke-width="11"/>
+  <!-- Bottom-right ring: blue -->
+  <ellipse cx="150" cy="120" rx="56" ry="42" fill="none" stroke="#1b4b93" stroke-width="11"/>
+  <!-- Top ring: white/black outline (drawn last so it sits over the link points) -->
+  <ellipse cx="115" cy="66" rx="56" ry="42" fill="#ffffff" stroke="#1a1a1a" stroke-width="6"/>
+
+  <!-- Letters -->
+  <text x="115" y="76" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#1a1a1a">F</text>
+  <text x="115" y="150" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#1a1a1a">O</text>
+  <text x="60" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#c0272d">L</text>
+  <text x="172" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#1b4b93">T</text>
+</svg>
